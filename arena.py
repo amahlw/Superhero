@@ -35,8 +35,8 @@ class Arena:
           return Armor with values from user input.
         '''
 
-        armor_name = input("What type of armor do you have? ")
-        block_value = input("How much does it block? ")
+        armor_name = input("What t armor do you have? ")
+        block_value = input("What's the value of  block? ")
 
         return Armor(armor_name, block_value)
 

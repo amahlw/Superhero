@@ -26,9 +26,14 @@ class Hero:
 
                 if not self.is_alive():
                     print(f" Winner is {opponent.name}")
+                    self.add_death(1)
+                    opponent.add_kill(1)
+
                     break
 
                 elif not opponent.is_alive():
+                    self.add_kill(1)
+                    opponent.add_death(1)
                     print(f" Winner is {self.name}")
                     break
 
@@ -76,7 +81,6 @@ class Hero:
 
     def add_weapon(self, weapon):
         self.abilities.append(weapon)
-
 
 if __name__ == "__main__":
     # If you run this file from the terminal
